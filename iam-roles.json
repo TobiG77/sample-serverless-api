@@ -1,0 +1,63 @@
+{
+    "Roles": [
+        {
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17", 
+                "Statement": [
+                    {
+                        "Action": "sts:AssumeRole", 
+                        "Principal": {
+                            "Service": "apigateway.amazonaws.com"
+                        }, 
+                        "Effect": "Allow", 
+                        "Sid": ""
+                    }
+                ]
+            }, 
+            "RoleId": "xyz",
+            "CreateDate": "2016-08-05T08:01:20Z", 
+            "RoleName": "CloudWatchLogging", 
+            "Path": "/", 
+            "Arn": "arn:aws:iam::xyz:role/CloudWatchLogging"
+        }, 
+        {
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17", 
+                "Statement": [
+                    {
+                        "Action": "sts:AssumeRole", 
+                        "Principal": {
+                            "Service": "apigateway.amazonaws.com"
+                        }, 
+                        "Effect": "Allow", 
+                        "Sid": ""
+                    }
+                ]
+            }, 
+            "RoleId": "xyz",
+            "CreateDate": "2016-08-05T03:22:34Z", 
+            "RoleName": "InvokeLambdabyAPIGateway", 
+            "Path": "/", 
+            "Arn": "arn:aws:iam::xyz:role/InvokeLambdabyAPIGateway"
+        }, 
+        {
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17", 
+                "Statement": [
+                    {
+                        "Action": "sts:AssumeRole", 
+                        "Effect": "Allow", 
+                        "Principal": {
+                            "Service": "lambda.amazonaws.com"
+                        }
+                    }
+                ]
+            }, 
+            "RoleId": "XYZ", 
+            "CreateDate": "2016-08-04T11:16:24Z", 
+            "RoleName": "Lambda-w-DynamoDB", 
+            "Path": "/", 
+            "Arn": "arn:aws:iam::xyz:role/Lambda-w-DynamoDB"
+        }, 
+    ]
+}

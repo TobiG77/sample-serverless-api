@@ -1,0 +1,25 @@
+service: sample-serverless-api
+provider:
+  name: aws
+  runtime: nodejs4.3
+
+defaults:
+  stage: dev
+  region: ap-southeast-2
+
+functions:
+  hello:
+    handler: handler.run
+    events:
+      - http:
+          path: users/create
+          method: get
+      - http:
+          path: movies/index
+          method: get
+      - http:
+          path: movies/{Title}
+          method: get
+      - http:
+          path: movies/{Title}
+          method: put
