@@ -1,5 +1,9 @@
 'use strict';
 
+module.exports.ping = function(event, context, cb) {
+    cb(null, "pong");
+};
+
 module.exports.run = function(event, context, cb) {
 
     console.log("received event", event);
@@ -13,7 +17,7 @@ module.exports.run = function(event, context, cb) {
         context.fail("Unable to process request!");
     };
 
-}
+};
 
 function handlePathRequest(event,context,cb) {
 
@@ -24,6 +28,7 @@ function handlePathRequest(event,context,cb) {
     const action = event.method + '/' + Object.keys(event.path)[0]
 
     switch (action) {
+
         case 'GET/Title':
 
             var params = {

@@ -8,6 +8,12 @@ defaults:
   region: ap-southeast-2
 
 functions:
+  ping:
+    handler: handler.ping
+    events:
+      - http:
+          path: ping
+          method: GET
   hello:
     handler: handler.run
     events:
